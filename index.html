@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TheosWorld App Store</title>
+  <meta name="description" content="Download free Windows apps from TheosWorld.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235b8cff'/%3E%3Ctext x='32' y='43' font-size='32' font-family='Segoe UI,Arial' font-weight='800' fill='white' text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <span class="brand-logo">T</span>
+        <span>TheosWorld App Store</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="active">All apps</a>
+        <a href="index.html?cat=Games">Games</a>
+        <a href="index.html?cat=Utilities">Utilities</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <h1>Apps built in TheosWorld</h1>
+      <p>Free Windows apps, one click to download. Search by name, browse by category, and grab the installer.</p>
+    </section>
+
+    <div class="toolbar">
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="search" id="search" placeholder="Search apps… (press / to focus)" autocomplete="off" aria-label="Search apps">
+      </label>
+      <select class="select" id="sort" aria-label="Sort apps">
+        <option value="featured">Featured first</option>
+        <option value="name">Name A–Z</option>
+        <option value="newest">Recently updated</option>
+        <option value="size">Smallest download</option>
+      </select>
+    </div>
+
+    <div class="chips" id="category-chips" role="group" aria-label="Filter by category"></div>
+
+    <div class="results-meta" id="results-meta"></div>
+
+    <section class="grid" id="app-grid" aria-live="polite"></section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2026 TheosWorld. All apps are Windows installers (.exe).</span>
+      <span>Static site · no accounts, no tracking.</span>
+    </div>
+  </footer>
+
+  <script src="assets/apps.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
